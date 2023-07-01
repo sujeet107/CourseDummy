@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title> Dashboard
+  </title>
+  <script src="https://kit.fontawesome.com/10082f57b9.js" crossorigin="anonymous"></script>
+  <style>
+    /* Custom CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .student-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .student-item {
+      margin-bottom: 10px;
+    }
+
+    .label {
+      display: flex;
+      align-items: center;
+      font-size: 16px;
+    }
+
+    .radio-input {
+      margin-right: 8px;
+    }
+
+    .submit-button {
+      padding: 8px 16px;
+      background-color: #4caf50;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #45a049;
+    }
+  </style>
+</head>
+
+<body>
+
+
+    <nav class="fixed top-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-blue-900 dark:border-gray-700">
+        <div class="px-3 py-3 lg:px-5 lg:pl-3">
+          <div class="flex items-center justify-between">
+            <div class="flex items-center justify-start">
+              <button data-drawer-target="logo-sidebar" data-drawer-toggle="logo-sidebar" aria-controls="logo-sidebar"
+                type="button"
+                class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600">
+                <span class="sr-only">Open sidebar</span>
+                <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path clip-rule="evenodd" fill-rule="evenodd"
+                    d="M2 4.75A.75.75 0 012.75 4h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 4.75zm0 10.5a.75.75 0 01.75-.75h7.5a.75.75 0 010 1.5h-7.5a.75.75 0 01-.75-.75zM2 10a.75.75 0 01.75-.75h14.5a.75.75 0 010 1.5H2.75A.75.75 0 012 10z">
+                  </path>
+                </svg>
+              </button>
+    
+    
+              <span class="self-center text-xl font-semibold sm:text-2xl whitespace-nowrap dark:text-white"> <img style="display: inline;" class="w-8 h-8 rounded-full" src="COURSEDUMMY.png" alt="user photo"> COURSEDUMMY</span></a>
+            </div>
+            <div class="dashboard navbar dark:text-white" id="bs-example-navbar-collapse-1" >
+              <ul class="flex items-center flex-shrink-0 text-white mr-6" >
+                  <li class="mr-6"><a href="adminInterface.html">Home</a></li>
+                  <li class="mr-6"><a href="adminlogin.html">Signout</a></li>
+              </ul>
+            </div>
+          </div>
+            <div class="flex items-center">
+              <div class="flex items-center ml-3">
+                <div>
+                  <button type="button"
+                    class="flex text-sm bg-gray-800 rounded-full focus:ring-4 focus:ring-gray-300 dark:focus:ring-gray-600"
+                    aria-expanded="false" data-dropdown-toggle="dropdown-user">
+                    <span class="sr-only">Open user menu</span>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+  <style>
+    /* Custom CSS styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 40px auto;
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .heading {
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .student-list {
+      list-style-type: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    .student-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .student-name {
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .radio-options {
+      display: flex;
+      align-items: center;
+    }
+
+    .radio-input {
+      margin: 10px;
+    }
+
+    .submit-button {
+      display: block;
+      margin: 20px auto 0;
+      padding: 8px 16px;
+      background-color: #0d155a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background-color: #0d155a;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h2 class="heading">Mark Attendance</h2>
+    <form>
+      <ul class="student-list">
+        <li class="student-item">
+          <span class="student-name">Poorab patel</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student1" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student1" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        </li>
+        <li class="student-item">
+          <span class="student-name">Sakshi jagnania</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student2" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student2" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        <li class="student-item">
+          <span class="student-name">aman khan</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student2" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student2" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        <li class="student-item">
+          <span class="student-name">sujal biswas</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student2" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student2" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        <li class="student-item">
+          <span class="student-name">Sujeet ghosh</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student2" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student2" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        <li class="student-item">
+          <span class="student-name">Akanksha chandra</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student2" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student2" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        <li class="student-item">
+          <span class="student-name">Farida shah</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student2" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student2" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        <li class="student-item">
+          <span class="student-name">Kunal gangarde</span>
+          <div class="radio-options">
+            <label class="label">
+              <input type="radio" name="student2" value="present" class="radio-input">
+              Present
+            </label>
+            <label class="label">
+              <input type="radio" name="student2" value="absent" class="radio-input">
+              Absent
+            </label>
+          </div>
+        </li>
+        <!-- Add more student list items here -->
+      </ul>
+      <button type="submit" class="submit-button">Submit</button>
+    </form>
+  </div>
+
+  <div>
+    <footer class="fixed bottom-0 z-50 w-full bg-white border-b border-gray-200 dark:bg-blue-900 dark:border-gray-700">
+      <div>
+        <br>
+        <br>
+        <br>
+      </div>
+    </footer>
+  </div>  
+</body>
+
+</html>
